@@ -11,7 +11,7 @@
 </template>
 <script lang="ts">
 import {Component, Emit, Prop, Vue} from 'vue-property-decorator';
-import Platform from '@/components/pure-ui/platform';
+import Platform from './platform';
 
 @Component({})
 export default class Cell extends Vue {
