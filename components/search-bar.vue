@@ -5,16 +5,19 @@
                 :disabled="true"
                 height="90"
                 :show-action="false"
-                placeholder="搜索城市和地区"></u-search>
-      <u-avatar size="76rpx" @click="toAccount" icon="account"></u-avatar>
+                :placeholder="placeholder"
+      ></u-search>
+      <u-avatar size="58rpx" @click="toAccount" icon="account"></u-avatar>
     </div>
   </div>
 </template>
 <script lang="ts">
-import {Component, Emit, Vue} from 'vue-property-decorator';
+import {Component, Emit, Prop, Vue} from 'vue-property-decorator';
 @Component({})
 export default class mdSearch extends Vue {
   private popupStatus = false;
+  @Prop({default: 'Search', type: String})
+  placeholder!: string
   @Emit()
   toAccount() {
     this.popupStatus = !this.popupStatus;

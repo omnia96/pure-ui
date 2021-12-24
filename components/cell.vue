@@ -1,7 +1,7 @@
 <template>
   <view class="cell" :style="[cellStyle]" @click="click">
     <view class="cell-start"></view>
-    <view class="cell-center" :class="{'cell-line': isIos && !isLast}">{{title}}</view>
+    <view class="cell-center body-text-2" :class="{'cell-line': isIos && !isLast}">{{title}}</view>
     <view class="cell-end" :class="{'cell-line': isIos && !isLast}">
       <view v-if="isIos">
         <u-icon name="arrow-right"></u-icon>
